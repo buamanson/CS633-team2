@@ -1,0 +1,415 @@
+/*
+
+ * Single Window Application Template:
+
+ * A basic starting point for your application.  Mostly a blank canvas.
+
+ *
+
+ * In app.js, we generally take care of a few things:
+
+ * - Bootstrap the application with any data we need
+
+ * - Check for dependencies like device type, platform version or network connection
+
+ * - Require and open our top-level UI component
+
+ *
+
+ */
+
+ 
+
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+
+Titanium.UI.setBackgroundColor('#1078B0');
+
+ 
+
+//bootstrap and check dependencies
+
+if (Ti.version < 1.8) {
+
+  alert('Sorry - this application template requires Titanium Mobile SDK 1.8 or later');
+
+}
+
+ 
+
+//
+
+// create root window
+
+//
+
+var win1 = Titanium.UI.createWindow({ 
+
+    title:'PMP  Fundamentals',
+
+    backgroundColor:'#1078B0'
+
+});
+
+ 
+
+// Header
+
+var label1 = Titanium.UI.createLabel({
+
+left: 10,
+
+top: 4,
+
+color:'#fff',
+
+text:'PMP Fundamentals',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label1);
+
+ 
+
+// Page links
+
+var label2 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 82,
+
+color:'#fff',
+
+text:'Process Groups',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label2);
+
+var label2a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 106,
+
+color:'#fff',
+
+text:'Display PMP prcess groups',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label2a);
+
+ 
+
+ 
+
+var label3 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 132,
+
+color:'#fff',
+
+text:'Knowledge Mapping',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label3);
+
+var label3a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 156,
+
+color:'#fff',
+
+text:'Display Process Groups to Knowledge Area Mapping',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label3a);
+
+ 
+
+ 
+
+var label4 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 182,
+
+color:'#fff',
+
+text:'Lessons',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label4);
+
+var label4a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 206,
+
+color:'#fff',
+
+text:'Display your PMP lessons',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label4a);
+
+ 
+
+ 
+
+var label5 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 232,
+
+color:'#fff',
+
+text:'Practice Questions',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label5);
+
+var label5a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 256,
+
+color:'#fff',
+
+text:'Display your PMP practice questions',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label5a);
+
+ 
+
+var label6 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 282,
+
+color:'#fff',
+
+text:'Ask the Professor',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label6);
+
+var label6a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 306,
+
+color:'#fff',
+
+text:'Ask the professor a question about PMP',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label6a);
+
+ 
+
+var label7 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 332,
+
+color:'#fff',
+
+text:'PMP Reference',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label7);
+
+var label7a = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 356,
+
+color:'#fff',
+
+text:'Goto the PMBOK guide',
+
+font:{fontSize:10,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label7a);
+
+ 
+
+var label8 = Titanium.UI.createLabel({
+
+left: 100,
+
+top: 382,
+
+color:'#fff',
+
+text:'About PMP Fundamentals',
+
+font:{fontSize:24,fontFamily:'Arial'},
+
+textAlign:'left',
+
+width:'auto'
+
+});
+
+win1.add(label8);
+
+ 
+
+function clickEvent(e) {
+
+alert('You clicked me');
+
+}
+
+ 
+
+label2.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label3.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label4.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label5.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label6.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label7.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+label8.addEventListener('click', function(e){
+
+alert('You clicked me');
+
+});
+
+ 
+
+ 
+
+win1.open();
